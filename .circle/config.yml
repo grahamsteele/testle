@@ -5,4 +5,4 @@ jobs:
        - image: circleci/python:2.7
      steps:
        - checkout
-       - run: echo "wedgely greetings"
+       - run: bin/deploy.sh
