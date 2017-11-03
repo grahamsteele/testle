@@ -5,4 +5,5 @@ jobs:
        - image: circleci/python:2.7
      steps:
        - checkout
-       - run: bin/deploy.sh
+       - run: ssh-add -l
+      #  - run: bin/deploy.sh
