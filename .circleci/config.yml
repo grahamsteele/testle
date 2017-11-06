@@ -4,6 +4,8 @@ jobs:
       branches:
         only:
           - master
+      docker:
+        - image: circleci/python:2.7
       steps:
         - checkout
         - run: bin/deploy.sh
