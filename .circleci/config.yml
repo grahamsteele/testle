@@ -1,9 +1,11 @@
 version: 2
 jobs:
-   build:
-     docker:
-       - image: circleci/python:2.7
-     steps:
-       - checkout
-       - run: ssh-add -l
-       - run: bin/deploy.sh
+    build:
+      branches:
+        only:
+          - master
+      docker:
+        - image: circleci/python:2.7
+      steps:
+        - checkout
+        - run: bin/deploy.sh
